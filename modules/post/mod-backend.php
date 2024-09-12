@@ -72,7 +72,12 @@ foreach ($pathComponents as $component) {
 
         } else {
             // Handle error if file does not exist
-            $postContent = "Error: File not found.";
+            ob_start();
+            include __DIR__ . '/post-not-found-html.php';
+            $postContent = ob_get_clean();
+            ob_end_clean();
+            $page_title = 'Page Not Found';
+            $page_alias = '404';
         }
         break; // Stop the loop if a post is found
     }
@@ -142,7 +147,13 @@ if (!$contentLoaded && $foundCategory) {
 $page_category = $foundCategory ? $foundCategory['alias'] : '';
 // Use $foundCategory and $foundPost as needed
 if (!$contentLoaded) {
-    $postContent = 'Error';
+
+    ob_start();
+    include __DIR__ . '/post-not-found-html.php';
+    $postContent = ob_get_clean();
+    ob_end_clean();
+    $page_title = 'Page Not Found';
+    $page_alias = '404';
 }
 
 

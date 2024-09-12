@@ -50,14 +50,18 @@ $page_alias = "index";
                     ?>
                     <div class="project">
                         <div class="image-wrapper">
-                            <a href="<?= $p['link'] ?>" target="_blank">
+                            <?php if (!empty($p['link']) && $p['link'] !== '#') { ?>
+                                <a href="<?= $p['link'] ?>" target="_blank">
+                                <?php } ?>
                                 <h3>
                                     <?= $p['title'] ?>
                                 </h3>
                                 <div class="image-container">
                                     <img src='<?= $p['image'] ?>' alt="<?= $p['title'] ?>">
                                 </div>
-                            </a>
+                                <?php if (!empty($p['link']) && $p['link'] !== '#') { ?>
+                                </a>
+                            <?php } ?>
                         </div>
 
                         <div class="info-wrapper">
