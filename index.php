@@ -36,7 +36,8 @@ $page_alias = "index";
             <h2> Projects </h2>
 
 
-            <p> This is my technical portfolio, a quick showcase of everything that I'm up to, from tech to volunteering.</p>
+            <p> This is my technical portfolio, a quick showcase of everything that I'm up to, from tech to
+                volunteering.</p>
             <div id="project-filter">
                 <input type="text" id="project-filter-input" placeholder="Filter projects...">
             </div>
@@ -45,79 +46,47 @@ $page_alias = "index";
                 </h3>
             </div>
             <div id="projects-tech-wrapper">
-                <?php foreach ($projects_tech as $p) {
+                <?php foreach ($projects as $p) {
                     ?>
-                                                    <div class="project">
-                                                        <div class="image-wrapper">
-                                                            <a href="<?= $p['link'] ?>" target="_blank">
-                                                                <h3>
-                                                                    <?= $p['title'] ?>
-                                                                </h3>
-                                                                <div class="image-container">
-                                                                    <img src='<?= $p['image'] ?>' alt="<?= $p['title'] ?>">
-                                                                </div>
-                                                            </a>
-                                                        </div>
+                    <div class="project">
+                        <div class="image-wrapper">
+                            <a href="<?= $p['link'] ?>" target="_blank">
+                                <h3>
+                                    <?= $p['title'] ?>
+                                </h3>
+                                <div class="image-container">
+                                    <img src='<?= $p['image'] ?>' alt="<?= $p['title'] ?>">
+                                </div>
+                            </a>
+                        </div>
 
-                                                        <div class="info-wrapper">
-                                                            <div class="tags">
-                                                                <?php foreach ($p['tags'] as $t)
-                                                                    echo '<span>' . $t . '</span>'; ?>
-                                                            </div>
-                                                            <p>
-                                                                <?= $p['description'] ?>
-                                                            </p>
+                        <div class="info-wrapper">
+                            <div class="tags">
+                                <?php foreach ($p['tags'] as $t)
+                                    echo '<span>' . $t . '</span>'; ?>
+                            </div>
+                            <p>
+                                <?= $p['description'] ?>
+                            </p>
 
-                                                        </div>
-                                                        <hr>
-                                                    </div>
+                        </div>
+                        <hr>
+                    </div>
 
 
-                                                    <?php
+                    <?php
                 }
 
                 ?>
             </div>
         </section>
 
-        <section id="projects-volunteering">
-            <h2 id="projects-volunteering-title"> Volunteering </h2>
-            <div id="project-volunteering-wrapper">
-                <?php foreach ($projects_volunteering as $p) {
-                    ?>
-                                                    <div class="project">
-                                                        <div class="image-wrapper">
-                                                            <a href="<?= $p['link'] ?>" target="_blank">
-                                                                <h3>
-                                                                    <?= $p['title'] ?>
-                                                                </h3>
-                                                                <img src='<?= $p['image'] ?>' alt="<?= $p['title'] ?>">
-                                                            </a>
-                                                        </div>
 
-                                                        <div class="info-wrapper">
-                                                            <div class="tags">
-                                                                <?php foreach ($p['tags'] as $t)
-                                                                    echo '<span>' . $t . '</span>'; ?>
-                                                            </div>
-                                                            <p>
-                                                                <?= $p['description'] ?>
-                                                            </p>
-
-                                                        </div>
-                                                        <hr>
-                                                    </div>
-
-
-                                                    <?php
-                }
-                ?>
-            </div>
-        </section>
 
         <section id="studies">
             <h2> Studies </h2>
-            <p>I have just returned from an Erasmus+ student exchange, where I studied <strong>Software Engineering</strong>
+            <p>I have just returned from an Erasmus+ student exchange, where I studied <strong>Software
+                    Engineering</strong>
                 at <strong>Instituto
                     Superior Miguel Torga</strong> in Coimbra, Portugal. This exchange lasted until the end of
                 January, when I
@@ -140,7 +109,8 @@ $page_alias = "index";
                             <th scope="col">Year</th>
                         </tr>
                     </thead>
-                    <tbody><tr>
+                    <tbody>
+                        <tr>
                             <td>University</td>
                             <td>University of Bucharest</td>
                             <td>Bucharest, Romania</td>
@@ -154,7 +124,7 @@ $page_alias = "index";
                             <td>Software Engineering</td>
                             <td>2023-2024</td>
                         </tr>
-                        
+
                         <tr>
                             <td>High School</td>
                             <td>National College Liviu Rebreanu</td>
@@ -168,12 +138,13 @@ $page_alias = "index";
 
             <div class="d-block d-md-none">
                 <ul>
-                    
+
                     <li>
                         <strong>University:</strong> Computers and Information Technology at University of
                         Bucharest,
                         Bucharest, Romania | 2022 - 2026 (Current)
-                    </li><li>
+                    </li>
+                    <li>
                         <strong>University:</strong> Software Engineering at Instituto Superior Miguel Torga,
                         Coimbra, Portugal | 2023 - 2024
                     </li>
@@ -193,10 +164,12 @@ $page_alias = "index";
                 Romania.
             </p>
 
-            <p>While my primary focus is on software engineering, I believe in a balanced life. I actively participate in volunteering activities, and am trying to be as involved in the community as possible.</p>
+            <p>While my primary focus is on software engineering, I believe in a balanced life. I actively participate
+                in volunteering activities, and am trying to be as involved in the community as possible.</p>
 
             <h3>Let's Connect</h3>
-            <p>I'm always open for suggestions and collaborations. Or, why not, conversations? Shoot me a message and let's get in touch!</p>
+            <p>I'm always open for suggestions and collaborations. Or, why not, conversations? Shoot me a message and
+                let's get in touch!</p>
 
 
         </section>
