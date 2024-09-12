@@ -1,6 +1,7 @@
+/* Add responsive design for smaller screens */
 .idea-card {
-  background-color: #ffffff; /* white background */
-  border-left: 4px solid #dddddd; /* subtle border color */
+  background-color: #ffffff;
+  border-left: 4px solid #dddddd;
   padding: 20px;
   margin: 20px 0;
   border-radius: 8px;
@@ -8,14 +9,13 @@
   transition: transform 0.3s ease;
   position: relative;
 }
-
 .idea-card:hover {
   transform: translateY(-5px);
 }
 
 .idea-title {
-  color: #333333; /* dark grey text */
-  font-size: 1.5em; /* smaller heading */
+  color: #333333;
+  font-size: 1.5em;
   margin-bottom: 5px;
 }
 
@@ -25,84 +25,69 @@
   right: 20px;
   width: 10%;
   height: 50px;
-
   display: flex;
   justify-content: flex-end;
   gap: 10px;
   align-items: center;
 }
-
-.rating-container .like-button.not-liked,
-.rating-container .dislike-button.not-disliked {
+.rating-container .like-button.not-liked {
   cursor: pointer;
   transition: filter 0.1s ease;
-}
-
-.rating-container .like-button.not-liked {
-  filter: brightness(0) saturate(100%) invert(82%) sepia(0%) saturate(9%)
-    hue-rotate(202deg) brightness(101%) contrast(104%);
+  filter: brightness(0) saturate(100%) invert(82%) sepia(0%) saturate(9%) hue-rotate(202deg) brightness(101%) contrast(104%);
   width: 20px;
   height: 20px;
 }
-
 .rating-container .like-button.not-liked:hover {
-  filter: brightness(0) saturate(100%) invert(23%) sepia(65%) saturate(6736%)
-    hue-rotate(341deg) brightness(77%) contrast(102%);
+  filter: brightness(0) saturate(100%) invert(23%) sepia(65%) saturate(6736%) hue-rotate(341deg) brightness(77%) contrast(102%);
 }
-
 .rating-container .dislike-button.not-disliked {
-  filter: brightness(0) saturate(100%) invert(82%) sepia(0%) saturate(9%)
-    hue-rotate(202deg) brightness(101%) contrast(104%);
+  cursor: pointer;
+  transition: filter 0.1s ease;
+  filter: brightness(0) saturate(100%) invert(82%) sepia(0%) saturate(9%) hue-rotate(202deg) brightness(101%) contrast(104%);
   width: 13px;
   height: 13px;
 }
-
 .rating-container .dislike-button.not-disliked:hover {
-  filter: brightness(0) saturate(100%) invert(23%) sepia(12%) saturate(5986%)
-    hue-rotate(313deg) brightness(84%) contrast(82%);
+  filter: brightness(0) saturate(100%) invert(23%) sepia(12%) saturate(5986%) hue-rotate(313deg) brightness(84%) contrast(82%);
 }
 
 .idea-date {
-  color: #555555; /* purple text for date to make it stand out */
+  color: #555555;
   font-size: 1em;
   margin-bottom: 10px;
 }
 
 .tag-container {
-  display: flex; /* Use flexbox for tag alignment */
-  flex-wrap: wrap; /* Allow tags to wrap to the next line */
-  gap: 5px; /* Add a small gap between tags */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
   margin-bottom: 15px;
 }
-
 .tag-container .tag {
-  background-color: #5f9ea0; /* Cadet blue: a muted shade of blue */
-  color: white; /* White text color for contrast */
-  padding: 5px 10px; /* Padding inside tags */
-  border-radius: 15px; /* Rounded corners for tags */
-  font-size: 0.75rem; /* Smaller font size for a cleaner look */
-  cursor: default; /* Default cursor to indicate non-clickable tags */
-  margin: 2px; /* Add a little margin between tags */
-  transition: background-color 0.3s; /* Transition for hover effect */
+  background-color: #5f9ea0;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  cursor: default;
+  margin: 2px;
+  transition: background-color 0.3s;
 }
-
 .tag-container .tag:hover {
-  background-color: #3b6978; /* A darker shade for hover state */
+  background-color: #3b6978;
 }
 
 .idea-content {
-  color: #333; /* dark grey text for readability */
-  background-color: #f9f9f9; /* very light grey background for content area */
+  color: #333;
+  background-color: #f9f9f9;
   padding: 15px;
   border-radius: 8px;
-  border: 1px solid #ddd; /* light border for the content area */
+  border: 1px solid #ddd;
 }
-
 .idea-content strong {
-  color: #333333; /* dark grey text for strong elements */
+  color: #333333;
 }
 
-/* Add responsive design for smaller screens */
 @media (max-width: 600px) {
   .idea-card {
     padding: 10px;
@@ -111,6 +96,8 @@
     padding: 10px;
   }
   .tag {
-    margin-bottom: 5px; /* space out tags on small screens */
+    margin-bottom: 5px;
   }
 }
+
+/*# sourceMappingURL=ideas.css.map */

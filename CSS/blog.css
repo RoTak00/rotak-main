@@ -1,6 +1,7 @@
+/* Add responsive design for smaller screens */
 .blog-card {
-  background-color: #ffffff; /* white background */
-  border-left: 4px solid #dddddd; /* subtle border color */
+  background-color: #ffffff;
+  border-left: 4px solid #dddddd;
   padding: 20px;
   margin: 20px 0;
   border-radius: 8px;
@@ -9,62 +10,46 @@
 }
 
 .blog-title {
-  color: #333333; /* dark grey text */
-  font-size: 1.5em; /* smaller heading */
+  color: #333333;
+  font-size: 1.5em;
   margin-bottom: 5px;
 }
 
 .blog-date {
-  color: #555555; /* purple text for date to make it stand out */
+  color: #555555;
   font-size: 1em;
   margin-bottom: 10px;
 }
 
 .tag-container {
-  display: flex; /* Use flexbox for tag alignment */
-  flex-wrap: wrap; /* Allow tags to wrap to the next line */
-  gap: 5px; /* Add a small gap between tags */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
   margin-bottom: 15px;
 }
-
 .tag-container .tag {
-  background-color: #5f9ea0; /* Cadet blue: a muted shade of blue */
-  color: white; /* White text color for contrast */
-  padding: 5px 10px; /* Padding inside tags */
-  border-radius: 15px; /* Rounded corners for tags */
-  font-size: 0.75rem; /* Smaller font size for a cleaner look */
-  cursor: default; /* Default cursor to indicate non-clickable tags */
-  margin: 2px; /* Add a little margin between tags */
-  transition: background-color 0.3s; /* Transition for hover effect */
+  background-color: #5f9ea0;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  cursor: default;
+  margin: 2px;
+  transition: background-color 0.3s;
 }
-
 .tag-container .tag:hover {
-  background-color: #3b6978; /* A darker shade for hover state */
+  background-color: #3b6978;
 }
 
 .blog-content {
-  color: #333; /* dark grey text for readability */
-  background-color: #f9f9f9; /* very light grey background for content area */
+  color: #333;
+  background-color: #f9f9f9;
   padding: 15px;
   border-radius: 8px;
-  border: 1px solid #ddd; /* light border for the content area */
+  border: 1px solid #ddd;
 }
-
 .blog-content strong {
-  color: #333333; /* dark grey text for strong elements */
-}
-
-/* Add responsive design for smaller screens */
-@media (max-width: 600px) {
-  .blog-card {
-    padding: 10px;
-  }
-  .blog-content {
-    padding: 10px;
-  }
-  .tag {
-    margin-bottom: 5px; /* space out tags on small screens */
-  }
+  color: #333333;
 }
 
 .read-more {
@@ -76,12 +61,13 @@
   text-decoration: none;
   cursor: pointer;
 }
-
 .read-more:hover {
   color: #000000;
   text-decoration: none;
 }
-
+.read-more:hover::after {
+  width: 100%;
+}
 .read-more::after {
   content: "";
   position: absolute;
@@ -93,10 +79,6 @@
   transition: width 0.3s;
 }
 
-.read-more:hover::after {
-  width: 100%;
-}
-
 .blog-post-content {
   text-align: justify;
 }
@@ -104,3 +86,17 @@
 .blog-post-date {
   text-align: right;
 }
+
+@media (max-width: 600px) {
+  .blog-card {
+    padding: 10px;
+  }
+  .blog-content {
+    padding: 10px;
+  }
+  .tag {
+    margin-bottom: 5px;
+  }
+}
+
+/*# sourceMappingURL=blog.css.map */
