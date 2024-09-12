@@ -1,0 +1,95 @@
+.main-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 10vw;
+  background-color: #280831;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: width 0.5s;
+  z-index: 5;
+  box-shadow: #000000 0px 0px 30px;
+}
+
+@media (max-width: 1150px) {
+  .main-nav {
+    width: 20vw;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .main-nav {
+    transition: none;
+  }
+}
+
+/*.main-nav .brand h1 {
+  text-align: center;
+  font-size: 24px;
+}*/
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+
+  transition: transform 0.2s;
+}
+
+.nav-links a:hover {
+  transform: scale(1.1);
+}
+
+.nav-links a:after {
+  content: "";
+  display: block;
+  height: 2px; /* Thickness of the line */
+  background-color: white; /* Color of the line */
+  margin: 2px auto 5px; /* Positioning the line */
+  transition: width 0.1s;
+}
+.nav-links a.selected:after {
+  width: 20px; /* Length of the line */
+}
+
+.nav-links a:not(.selected):after {
+  width: 0px;
+}
+.nav-links a.child {
+  font-size: 0.8rem;
+  padding: 3px 5px;
+}
+@media (min-width: 768px) {
+}
+
+@media screen and (max-width: 768px) {
+  .main-nav {
+    width: 100%;
+    height: 10vh;
+    flex-direction: row;
+    justify-content: start;
+    padding: 0;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: auto;
+    height: 100%;
+  }
+
+  .nav-links a {
+    padding: 0 17px;
+    text-wrap: nowrap;
+  }
+}

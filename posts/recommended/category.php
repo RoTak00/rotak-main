@@ -1,0 +1,1 @@
+<p>From my favourite movie creators, to cool books, expect to find posts about things I find rather interesting.</p>

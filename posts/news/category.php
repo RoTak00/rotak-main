@@ -1,0 +1,2 @@
+<p>News! On this section of my website, I intend to post links to cool projects and contests that I find. Feel free to use it as a source of inspiration. </p>
+<p>Additionally, I might occasionally post news about my activity, either it be personal, professional, or in the volunteering realm. </p>
