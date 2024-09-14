@@ -1,16 +1,9 @@
 <?php
 // Get the requested URI path
-$uriPath = $_SERVER['REQUEST_URI'];
-
-// Remove the leading slash for accurate exploding
-$trimmedPath = ltrim($uriPath, '/');
-
-$trimmedPath = explode('?', $trimmedPath)[0];
+$trimmedPath = isset($_GET['path']) ? trim($_GET['path'], '/') : '';
 
 // Split the path into components
 $pathComponents = explode('/', $trimmedPath);
-// Assuming $conn is your MySQLi database connection
-// Assuming $pathComponents is your array of path components
 
 
 
