@@ -8,4 +8,9 @@ class AccountController extends BaseController
     {
         return $this->loadView('home.php', ['data' => $this->get]);
     }
+
+    public function login()
+    {
+        return "Login";
+    }
 }
