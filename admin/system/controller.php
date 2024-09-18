@@ -1,15 +1,14 @@
 <?php
 class BaseController
 {
-    public $get;
-    public $post;
-    public $components;
+    public $registry;
 
-    public function __construct($get, $post, $components)
+    public function __construct($registry)
     {
-        $this->get = $get;
-        $this->post = $post;
-        $this->components = $components;
+
+        $this->registry = $registry;
+
+        $this->loadModel('account/auth');
 
         $this->onLoad();
     }
@@ -46,18 +45,19 @@ class BaseController
         $class = $components[0];
         $function = $components[1] ?? 'index';
         $extra_components = array_slice($components, 2);
-        $params = ['components' => array_merge($extra_components, $this->components), 'get' => $this->get, 'post' => $this->post];
 
         $file = __DIR__ . '/../controllers/' . $class . '.php';
 
         if (file_exists($file)) {
-            include $file;
+            extract($data);
+
+            include_once $file;
 
             $className = ucfirst($class) . 'Controller'; // test becomes TestController
 
             if (class_exists($className)) {
-                $controller = new $className($this->get, $this->post, $extra_components);
-                $output = $controller->$function($params);
+                $controller = new $className($this->registry, $extra_components);
+                $output = $controller->$function($extra_components);
 
                 return $output;
             } else {
@@ -88,7 +88,7 @@ class BaseController
             if (class_exists($className)) {
                 // Store the instantiated model in the models array and make it accessible as a property
 
-                $this->$modelName = new $className();
+                $this->$modelName = new $className($this->registry);
             } else {
                 return "Model class $className not found!";
             }
