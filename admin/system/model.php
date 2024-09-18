@@ -2,15 +2,21 @@
 class BaseModel
 {
 
-    public $get;
-    public $post;
-    public $components;
     public $registry;
 
     public function __construct($registry)
     {
         $this->registry = $registry;
         $this->onLoad();
+    }
+
+    public function __get($name)
+    {
+        // Fetch from the registry if it exists
+        if (isset($this->registry->registry[$name])) {
+            return $this->registry->registry[$name];
+        }
+        return null; // Or throw an error if you want strict behavior
     }
 
     public function onLoad()

@@ -19,7 +19,7 @@ $request = new Request($registry);
 
 $registry->add('request', $request);
 
-$controller = new BaseController($registry->registry);
+$controller = new BaseController($registry);
 
 
 echo $controller->loadController($_GET['path']);

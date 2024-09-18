@@ -13,7 +13,7 @@ class AccountAuthModel extends BaseModel
 
         $sqlq = "INSERT INTO auth_session(token) VALUES ('" . $token . "')";
 
-        $result = $this->registry['db']->query($sqlq);
+        $result = $this->db->query($sqlq);
 
         return $token;
     }
@@ -25,7 +25,7 @@ class AccountAuthModel extends BaseModel
     {
         $sqlq = "SELECT valid FROM auth_session WHERE token = '" . $token . "'";
 
-        $result = $this->registry['db']->query($sqlq);
+        $result = $this->db->query($sqlq);
 
         if (!($result->num_rows > 0)) {
             return null;
@@ -81,7 +81,7 @@ class AccountAuthModel extends BaseModel
     {
         $sqlq = "UPDATE auth_session SET last_validated = NOW() WHERE token = '" . $token . "'";
 
-        $result = $this->registry['db']->query($sqlq);
+        $result = $this->db->query($sqlq);
 
         return true;
     }
@@ -92,7 +92,7 @@ class AccountAuthModel extends BaseModel
     {
         $sqlq = "UPDATE auth_session SET valid = 0 WHERE last_validated < NOW() - INTERVAL " . $interval;
 
-        $result = $this->registry['db']->query($sqlq);
+        $result = $this->db->query($sqlq);
         return true;
     }
 
@@ -100,7 +100,7 @@ class AccountAuthModel extends BaseModel
     {
         $sqlq = "UPDATE auth_session SET valid = 0 WHERE token = '" . $token . "'";
 
-        $result = $this->registry['db']->query($sqlq);
+        $result = $this->db->query($sqlq);
 
         return true;
     }
