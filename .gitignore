@@ -8,3 +8,4 @@ assets/documents
 .sass-cache
 .sass-cache/*
 **/*.scss
+**/*.log
