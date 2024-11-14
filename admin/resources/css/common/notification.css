@@ -1,0 +1,25 @@
+.notification {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.notification.warning {
+  background-color: #fff3cd;
+  color: #856404;
+}
+.notification.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+.notification.error {
+  background-color: #f5c6cb;
+  color: #721c24;
+}
+
+.notification-container {
+  margin-bottom: 1em;
+}
+
+/*# sourceMappingURL=notification.css.map */

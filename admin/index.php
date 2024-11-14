@@ -1,7 +1,7 @@
 <?php
 
 
-define('BASE_DIR', __DIR__ . '/');
+define('BASE_DIR', __DIR__ . '/../');
 define('CONTENT_DIR', __DIR__ . '/');
 
 require_once BASE_DIR . 'modules/mod-include.php';
@@ -16,7 +16,6 @@ require_once BASE_DIR . 'system/notification.php';
 require_once BASE_DIR . 'system/url.php';
 require_once BASE_DIR . 'system/image.php';
 require_once BASE_DIR . 'config.php';
-
 
 ini_set('display_errors', E_ALL);
 error_reporting(E_ALL);
@@ -53,12 +52,11 @@ $registry->add('image', $image);
 
 $controller = new BaseController($registry);
 
-
 $path = $_GET['path'] ?? null;
 
-if ($path) {
+/*if ($path) {
     $path = $url->loadAlias($path);
-}
-$_GET['newpath'] = $path;
+}*/
+
 
 echo $controller->loadController($path);

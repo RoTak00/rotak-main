@@ -1,1 +1,0 @@
-<p>How to sign up for Erasmus?</p><p>How to set up a double-computer connection for a quality live-stream?</p><p>In this section, expect to find short guides on different topics that I find interesting.</p>
